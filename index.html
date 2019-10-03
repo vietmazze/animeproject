@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Watch Popular Anime</title>
+  </head>
+
+  <body>
+    <!-- START HERE -->
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-black p-2">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="#" class="navbar-brand ">
+          <img src="./img/blue.png" alt="" width="40" height="40" />
+          <h3 id="primary" class="d-inline align-middle">Busta</h3>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-5">
+            <li class="nav-item ">
+              <a href="show.html" class="nav-link"> Shows</a>
+            </li>
+            <li class="nav-item">
+              <a href="news.html" class="nav-link"> News</a>
+            </li>
+            <li class="nav-item">
+              <a href="manga.html" class="nav-link"> Manga</a>
+            </li>
+            <li class="nav-item">
+              <a href="forum.html" class="nav-link"> Forums</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">
+              <i class="far fa-user"></i>
+              <h3 class="login d-inline">Login</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- COLUMNS-->
+
+    <section id="showcase">
+      <div class="container">
+        <div class="row ">
+          <!-- CAROUSEL FOR TRENDING NEWS/ANIME-->
+          <div class="col-lg-8 pt-2">
+            <div class="content ">
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#myCarousel"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item carousel-image-1 active ">
+                    <div class="overlay">
+                      <div class="carousel-caption text-left ">
+                        <a href="" class="name">Hunter x Hunter</a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatibus, aliquid.
+                          <a href="" class=" d-inline watch"
+                            ><i class="fas fa-play-circle"></i> Watch now</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-image-2">
+                    <div class="overlay">
+                      <div class="carousel-caption text-left ">
+                        <a href="" class="name">Hunter x Hunter</a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatibus, aliquid.
+                          <a href="" class=" d-inline watch"
+                            ><i class="fas fa-play-circle"></i> Watch now</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-image-3 ">
+                    <div class="overlay">
+                      <div class="carousel-caption text-left ">
+                        <a href="" class="name">Hunter x Hunter</a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatibus, aliquid.
+                          <a href="" class=" d-inline watch"
+                            ><i class="fas fa-play-circle"></i> Watch now</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-image-4">
+                    <div class="overlay">
+                      <div class="carousel-caption text-left ">
+                        <a href="" class="name">Hunter x Hunter</a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatibus, aliquid.
+                          <a href="" class=" d-inline watch"
+                            ><i class="fas fa-play-circle"></i> Watch now</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item carousel-image-5">
+                    <div class="overlay">
+                      <div class="carousel-caption text-left ">
+                        <a href="" class="name">Hunter x Hunter</a>
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Voluptatibus, aliquid.
+                          <a href="" class=" d-inline watch"
+                            ><i class="fas fa-play-circle"></i> Watch now</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="#myCarousel"
+                  data-slide="prev"
+                  class="carousel-control-prev"
+                >
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a
+                  href="#myCarousel"
+                  data-slide="next"
+                  class="carousel-control-next"
+                >
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+              <!--RECENTLY UPDATED -->
+              <div class="recently-updated">
+                <div
+                  class=" d-flex flex-row text-white"
+                  style="border-bottom: 0.5px solid whitesmoke"
+                >
+                  <h3 style="margin-top: 10px">RECENTLY UPDATED</h3>
+                  <ul class="nav power" id="myTab" role="tablist">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link active"
+                        id="all-tab"
+                        data-toggle="tab"
+                        href="#all"
+                        role="tab"
+                        aria-controls="home"
+                        aria-selected="true"
+                        >All</a
+                      >
+                    </li>
+                    <li class="nav-item text">
+                      <a
+                        class="nav-link"
+                        id="subbed-tab"
+                        data-toggle="tab"
+                        href="#subbed"
+                        role="tab"
+                        aria-controls="profile"
+                        aria-selected="false"
+                        >Subbed</a
+                      >
+                    </li>
+                    <li class="nav-item text">
+                      <a
+                        class="nav-link"
+                        id="dub-tab"
+                        data-toggle="tab"
+                        href="#dubbed"
+                        role="tab"
+                        aria-controls="contact"
+                        aria-selected="false"
+                        >Dubbed</a
+                      >
+                    </li>
+                    <li class="nav-item text">
+                      <a
+                        class="nav-link"
+                        id="trend-tab"
+                        data-toggle="tab"
+                        href="#trending"
+                        role="tab"
+                        aria-controls="contact"
+                        aria-selected="false"
+                        >Trending</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active mt-2"
+                    id="all"
+                    role="tabpanel"
+                    aria-labelledby="day-tab"
+                  >
+                    <div class=" poster row">
+                      <div class="col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2019/07/972919bc2ae422891d85fa4c250007ab.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; text-align:center; text-align-last:center;font-size:.80rem; overflow: hidden"
+                          >
+                            Kochouki: Wakaki Nobunaga</a
+                          >
+                        </div>
+                      </div>
+                      <div class=" col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2018/04/7c8891e6916842084ba3cc029942a54b.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; text-align:center; text-align-last:center;font-size:.80rem; overflow: hidden"
+                          >
+                            Hinamatsuri</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2019/07/9e546c7cae36c62ad2a04d86c09e57cc.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; text-align:center; text-align-last:center; font-size:.80rem;overflow: hidden"
+                          >
+                            Kawaikereba Hentai demo Suki ni Natte Kuremasu</a
+                          >
+                        </div>
+                      </div>
+
+                      <div class=" col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2018/10/30713ddd652e14702fa3b8cd4810fcfb.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; text-align:center; text-align-last:center; font-size:.80rem;overflow: hidden"
+                          >
+                            Inzuma Eleven: Orion no Kokuin</a
+                          >
+                        </div>
+                      </div>
+                      <div class="w-100 d-none d-md-block d-lg-none"></div>
+                      <div class=" col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2019/01/1f5723f7dab4e63be9ab1e672f5dff83.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; height:40px; text-align:center;  text-align-last:center; font-size:.80rem; overflow: hidden "
+                          >
+                            Karakai Jouzu no Takagi-san 2</a
+                          >
+                        </div>
+                      </div>
+                      <div class=" col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2019/07/9cd77b5d4917a3b5c890cc796b9170e9.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; height:40px; text-align:center;  text-align-last:center; font-size:.80rem; overflow: hidden "
+                          >
+                            Black Clover</a
+                          >
+                        </div>
+                      </div>
+                      <div class=" col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2019/07/94cff018a17d6f0e7d47c1a5b1c0695d.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; height:40px; text-align:center;  text-align-last:center; font-size:.80rem; overflow: hidden "
+                          >
+                            Bem</a
+                          >
+                        </div>
+                      </div>
+                      <div class=" col-md-3 col-4">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2018/10/6343dcbb451a9d86454caca35d933073.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; height:40px; text-align:center;  text-align-last:center; font-size:.80rem; overflow: hidden "
+                          >
+                            The Ones Within</a
+                          >
+                        </div>
+                      </div>
+                      <div class="col-4 col-md-3 ">
+                        <div class="d-flex flex-column justify-content-start">
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                          >
+                            <img
+                              src="https://static.akacdn.ru/files/images/2019/01/b0fb2861c4e82af201079a502d875b43.jpg"
+                              alt=""
+                              style="height:200px"
+                          /></a>
+                          <a
+                            href="https://9anime.to/watch/kochouki-wakaki-nobunaga.1m5w"
+                            class=""
+                            style="width: 150px; height:40px; text-align:center;  text-align-last:center; font-size:.80rem; overflow: hidden "
+                          >
+                            Yamishibai: Japanese Ghost Stories 7</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="subbed"
+                    role="tabpanel"
+                    aria-labelledby="profile-week"
+                  >
+                    ye
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="dubbed"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    asdf
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="trending"
+                    role="tabpanel"
+                    aria-labelledby="contact-tab"
+                  >
+                    asdf
+                  </div>
+                </div>
+              </div>
+              <!-- LATEST NEWS -->
+              <div class="latest-news">
+                <h3
+                  style="border-bottom: 0.5px solid whitesmoke;margin-right:5px; "
+                >
+                  LATEST NEWS
+                </h3>
+                <div class="row">
+                  <div class="border-control">
+                  <div class="col-lg-3">
+                    <a href="" class="image">
+                      <img
+                        src="https://img1.ak.crunchyroll.com/i/spire4/a0c18cd34ac70a309ab7c2d263793c3f1568829145_thumb.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-9">
+                    <div class="title">
+                      <a href="" class=""
+                        >Crunchyroll Announces Fall 2019 Anime Lineup!</a
+                      >
+                    </div>
+                    <div class="subtitle d-flex">
+                      <h6 class='text-muted'>Posted by<a href="" class=""> John Doe</a>   7 days ago </h5>
+                      <a href="http://facebook.com" class="text-white">
+                        <div class="icon">
+                          <i class="fab fa-facebook ">
+                            Share</i
+                          >
+                        </div>
+                      </a>
+                    </div>
+                    <div class="contents">
+                      <p class="">The seasons are a-changing, and it's time to look forward to the next season of anime! Check out all of the currently
+                      announced titles coming to Crunchyroll this Fall!</p>
+                    </div>
+                    <div class="readmore">
+                      <a href="" class="">
+                        <i class="fas fa-angle-double-right"></i> read more
+                      </a>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="border-control">
+                      <div class="col-lg-3">
+                        <a href="" class="image">
+                          <img src="https://img1.ak.crunchyroll.com/i/spire3/bfd173a7bdf922d7839e899fa24706451569494642_thumb.jpg" alt="" />
+                        </a>
+                      </div>
+                      <div class="col-lg-9 ">
+                        <div class="title">
+                          <a href="" class="">Dengeki Bunko Celebrates Love Comedy Light Novels with Voice Ad</a>
+                        </div>
+                        <div class="subtitle d-flex">
+                          <h6 class='text-muted'>Posted by<a href="" class=""> John Doe</a> 7 days ago </h5>
+                            <a href="http://facebook.com" class="text-white">
+                              <div class="icon">
+                                <i class="fab fa-facebook ">
+                                  Share</i>
+                              </div>
+                            </a>
+                        </div>
+                        <div class="contents">
+                          <p class="">The seasons are a-changing, and it's time to look forward to the next season of anime! Check out all of
+                            the currently
+                            announced titles coming to Crunchyroll this Fall!</p>
+                        </div>
+                        <div class="readmore">
+                          <a href="" class="">
+                            <i class="fas fa-angle-double-right"></i> read more
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="border-control">
+                        <div class="col-lg-3">
+                          <a href="" class="image">
+                            <img src="https://img1.ak.crunchyroll.com/i/spire2/c027e32231a2f5b885d3b9e1332a143f1569503832_thumb.jpg" alt="" />
+                          </a>
+                        </div>
+                        <div class="col-lg-9 ">
+                          <div class="title">
+                            <a href="" class="">Sentai Filmworks Licenses Ahiru no Sora Basketball Anime</a>
+                          </div>
+                          <div class="subtitle d-flex">
+                            <h6 class='text-muted'>Posted by<a href="" class=""> John Doe</a> 7 days ago </h5>
+                              <a href="http://facebook.com" class="text-white">
+                                <div class="icon">
+                                  <i class="fab fa-facebook ">
+                                    Share</i>
+                                </div>
+                              </a>
+                          </div>
+                          <div class="contents">
+                            <p class="">With the Fall 2019 anime season right around the corner, it's time to see more of what everyone has cooking for their
+                            respective lineups. The latest comes from Sentai Filmworks, which announced plans to simulcast the anime adaptation of
+                            Takeshi Hinata's basketball manga, Ahiru no Sora. </p>
+                          </div>
+                          <div class="readmore">
+                            <a href="" class="">
+                              <i class="fas fa-angle-double-right"></i> read more
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SIDE BAR TOP ANIME-->
+          <div class="col-lg-4 pt-2">
+            <div class="sidebar">
+              <div
+                class=" d-flex flex-row text-white"
+                style="border-bottom: 0.5px solid whitesmoke"
+              >
+                <h3 style="margin-top: 10px">TOP AIRING ANIME</h3>
+                <ul class="nav power" id="myTab" role="tablist">
+                  <li class="nav-item day">
+                    <a
+                      class="nav-link active"
+                      id="day-tab"
+                      data-toggle="tab"
+                      href="#day"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                      >Day</a
+                    >
+                  </li>
+                  <li class="nav-item text">
+                    <a
+                      class="nav-link"
+                      id="week-tab"
+                      data-toggle="tab"
+                      href="#week"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >Week</a
+                    >
+                  </li>
+                  <li class="nav-item month">
+                    <a
+                      class="nav-link"
+                      id="month-tab"
+                      data-toggle="tab"
+                      href="#month"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >Month</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="day"
+                  role="tabpanel"
+                  aria-labelledby="day-tab"
+                >
+                  <ul class="">
+                    <li class=" anime-item">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire4/24452933dd3f9282b32e49f0ce5fdc5b1546985597_small.jpg"
+                      />
+                      <span class="">Mob Psycho 100</span>
+                    </li>
+                    <li class=" anime-item">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire2/b0ccaf974df65b4a74c0b84f3696ecd41562788869_small.jpg"
+                      />
+                      <span class="">Given</span>
+                    </li>
+                    <li class=" anime-item ">
+                      <img
+                        alt="Attack on Titan"
+                        src="https://img1.ak.crunchyroll.com/i/spire1/13b484b48acc14537703fbc505b087121558560482_small.jpg"
+                        class="img-fluid"
+                      />
+                      <span class="">Attack on Titan</span>
+                    </li>
+                    <li class="anime-item">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire4/fabddf1040abbd18948b9aacc18011b31475523493_small.jpg"
+                      />
+                      <span class="">Full Metal Alchemist</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="week"
+                  role="tabpanel"
+                  aria-labelledby="profile-week"
+                >
+                  <ul class="">
+                    <li class=" anime-item ">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire4/24452933dd3f9282b32e49f0ce5fdc5b1546985597_small.jpg"
+                      />
+                      <span class="">Mob Psycho 100</span>
+                    </li>
+                    <li class="anime-item ">
+                      <img
+                        class=" anime-item img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire2/b0ccaf974df65b4a74c0b84f3696ecd41562788869_small.jpg"
+                      />
+                      <span class="">Given</span>
+                    </li>
+                    <li class="anime-item ">
+                      <img
+                        alt="Attack on Titan"
+                        src="https://img1.ak.crunchyroll.com/i/spire1/13b484b48acc14537703fbc505b087121558560482_small.jpg"
+                        class="img-fluid"
+                      />
+                      <span class="">Attack on Titan</span>
+                    </li>
+                    <li class="anime-item ">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire4/fabddf1040abbd18948b9aacc18011b31475523493_small.jpg"
+                      />
+                      <span class="">Full Metal Alchemist</span>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="month"
+                  role="tabpanel"
+                  aria-labelledby="contact-tab"
+                >
+                  <ul class="">
+                    <li class="anime-item ">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire4/24452933dd3f9282b32e49f0ce5fdc5b1546985597_small.jpg"
+                      />
+                      <span class="">Mob Psycho 100</span>
+                    </li>
+                    <li class="anime-item ">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire2/b0ccaf974df65b4a74c0b84f3696ecd41562788869_small.jpg"
+                      />
+                      <span class="">Given</span>
+                    </li>
+                    <li class="anime-item ">
+                      <img
+                        alt="Attack on Titan"
+                        src="https://img1.ak.crunchyroll.com/i/spire1/13b484b48acc14537703fbc505b087121558560482_small.jpg"
+                        class="img-fluid"
+                      />
+                      <span class="">Attack on Titan</span>
+                    </li>
+                    <li class="anime-item">
+                      <img
+                        class="img-fluid "
+                        alt="Mob Psycho 100"
+                        src="https://img1.ak.crunchyroll.com/i/spire4/fabddf1040abbd18948b9aacc18011b31475523493_small.jpg"
+                      />
+                      <span class="">Full Metal Alchemist</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--RECENTLY ADDED-->
+            <div class="recent-added">
+              <h3
+                style="border-bottom: 0.5px solid whitesmoke; padding-bottom: 10px"
+              >
+                TOP UPCOMING ANIME
+              </h3>
+              <ul>
+                <li class="anime-item ">
+                  <img
+                    class="img-fluid "
+                    alt="Mob Psycho 100"
+                    src="https://img1.ak.crunchyroll.com/i/spire2/b0ccaf974df65b4a74c0b84f3696ecd41562788869_small.jpg"
+                  />
+                  <span class="">Given</span>
+                </li>
+                <li class="anime-item ">
+                  <img
+                    alt="Attack on Titan"
+                    src="https://img1.ak.crunchyroll.com/i/spire1/13b484b48acc14537703fbc505b087121558560482_small.jpg"
+                    class="img-fluid"
+                  />
+                  <span class="">Attack on Titan</span>
+                </li>
+                <li class="anime-item">
+                  <img
+                    class="img-fluid "
+                    alt="Mob Psycho 100"
+                    src="https://img1.ak.crunchyroll.com/i/spire4/fabddf1040abbd18948b9aacc18011b31475523493_small.jpg"
+                  />
+                  <span class="">Full Metal Alchemist</span>
+                </li>
+              </ul>
+            </div>
+            <!-- MOST POPULAR ANIME-->
+            <div class="recent-added">
+              <h3 style="border-bottom: 0.5px solid whitesmoke; padding-bottom: 10px">
+                MOST POPULAR ANIME
+              </h3>
+              <ul>
+                <li class="anime-item ">
+                  <img class="img-fluid " alt="Mob Psycho 100"
+                    src="https://img1.ak.crunchyroll.com/i/spire2/b0ccaf974df65b4a74c0b84f3696ecd41562788869_small.jpg" />
+                  <span class="">Given</span>
+                </li>
+                <li class="anime-item ">
+                  <img alt="Attack on Titan"
+                    src="https://img1.ak.crunchyroll.com/i/spire1/13b484b48acc14537703fbc505b087121558560482_small.jpg"
+                    class="img-fluid" />
+                  <span class="">Attack on Titan</span>
+                </li>
+                <li class="anime-item">
+                  <img class="img-fluid " alt="Mob Psycho 100"
+                    src="https://img1.ak.crunchyroll.com/i/spire4/fabddf1040abbd18948b9aacc18011b31475523493_small.jpg" />
+                  <span class="">Full Metal Alchemist</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+      <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-1 text-center">
+              <h5>HELP</h5>
+              <a href="" class="">Contact</a>
+              <a href="" class="">FAQ</a>
+              <a href="" class="">Request</a>
+            </div>
+            <div class="col-lg-1 text-center">
+                <h5>LINKS</h5>
+                <a href="" class="">Newest</a>
+                <a href="" class="">Recently Updated</a>
+                <a href="" class="">Ongoing</a>
+                <a href="" class="">Most Watched</a>
+                <a href="" class="">Schedule</a>
+                <a href="" class="">A-Z List</a>
+            </div>
+            <div class="col-lg-8 text-center">
+              <h3 class='display-4'>BUSTA</h3>
+              <div class="icon d-inline">
+              <i class="fab fa-twitter-square fa-2x pr-1"></i>
+              <i class="discord fab fa-discord fa-2x pr-1"></i>
+              <i class="fab fa-reddit-square fa-2x"></i>
+              </div>
+              
+              <p class="lead text-center">
+                Copyright &copy;
+                <span id="year"></span>
+                Busta. All Rights Reserved
+                <br/>
+                <p class="text-muted"></p>Disclaimer: This site does not store any files. All are provided by non-affliated third parties.
+              </p>
+            </div>
+            <div class="col-lg-2 d-none d-lg-block ">
+              <img src="./img/Gon_&_Killua_chibi_01.png" alt="">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+      integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Get the current year for the copyright
+      $("#year").text(new Date().getFullYear());
+    </script>
+    <script>
+      // Configure Slider
+      $(".carousel").carousel({ interval: 6000, pause: "hover" });
+    </script>
+  </body>
+</html>

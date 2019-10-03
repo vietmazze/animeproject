@@ -1,0 +1,209 @@
+/* BODY */
+body {
+  background: rgb(24, 22, 22);
+  color: #fff;
+}
+
+#primary,
+a {
+  color: #3292a6;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+p {
+  color: #ccc;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+/* NAV BAR */
+nav img {
+  border-radius: 50%;
+}
+
+.nav-item {
+  font-size: 1rem;
+  padding-right: 1rem;
+}
+
+/* COLUMN 1 NEEDED?*/
+.content {
+  margin-right: -2rem;
+}
+/* CAROUSEL */
+.carousel-caption {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 1rem;
+  display: block;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+}
+.watch {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #eee;
+  border-radius: 2px;
+  padding: 3px 5px;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.carousel-item {
+  height: 250px;
+}
+
+.carousel-image-1 {
+  background: url("../img/slideshow/image1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-image-2 {
+  background: url("../img/slideshow/image2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-image-3 {
+  background: url("../img/slideshow/image4.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-image-4 {
+  background: url("../img/slideshow/image3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-image-5 {
+  background: url("../img/slideshow/image5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* SIDE BAR POPULAR SHOW */
+
+.day {
+  margin-left: -4px;
+}
+.month {
+  margin-left: -47px;
+  padding-right: 0;
+  padding-left: 10px;
+}
+.title {
+  display: inline;
+  font-size: 0.5rem;
+}
+.power {
+  font-size: 5rem;
+  height: 30px !important;
+}
+.tab-content ul,
+.recent-added ul {
+  padding-top: 5px;
+  margin-left: -35px;
+  list-style-type: none;
+}
+.tab-content span {
+  position: relative;
+  top: -20px;
+  font-size: 1rem;
+  font-weight: 100;
+}
+.text {
+  margin-left: -35px;
+}
+.anime-item {
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid whitesmoke;
+}
+
+.sidebar,
+.recent-added {
+  background-color: rgb(71, 64, 64);
+  padding: 10px;
+  margin-left: 1rem;
+}
+
+/* RECENTLY UPDATED SECTION */
+
+.recently-updated,
+.recent-added,
+.latest-news {
+  background-color: rgb(71, 64, 64);
+  padding-left: 1.3rem;
+  margin-top: 10px;
+}
+
+.poster a {
+  color: white;
+}
+
+/* LATEST NEWS */
+.latest-news {
+  padding-top: 10px;
+}
+.latest-news .img {
+  border: 1px solid #ddd;
+}
+.latest-news .title {
+  font-size: 1.5rem;
+}
+
+.latest-news .subtitle {
+  font-size: 1rem;
+}
+
+.latest-news .readmore {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.border-control {
+  display: flex;
+  margin-right: 20px;
+  border-bottom: 1px solid whitesmoke;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+/* FOOTER */
+#main-footer i .discord {
+  font-size: 2.6rem;
+  position: relative;
+  vertical-align: -30px;
+}
+
+/* MEDIA SCREEN */
+@media (max-width: 600px) {
+  .login {
+    visibility: hidden;
+  }
+}
+
+/* @media (min-width: 600px) {
+  .poster img {
+    height: 180px !important;
+  }
+} */
