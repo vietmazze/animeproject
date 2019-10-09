@@ -1,0 +1,37 @@
+1)npm install --save-dev tailwindcss autoprefixer postcss-cli
+
+2)npx tailwind init tailwind.config.js
+
+
+3)create file called postcss.config.js and add
+const tailwindcss = require('tailwindcss');
+module.exports = {
+    plugins: [
+        tailwindcss('./tailwind.config.js'),
+        require('autoprefixer'),
+    ],
+};
+
+
+4)create a file call index.css in src/styles/
+Add the following to your index.css file.
+
+//index.css
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+5) Configure package.json
+"scripts": {
+  "build:style":"tailwind build src/styles/index.css -o src/index.css",
+  "start": "npm run build:style && react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
+
+

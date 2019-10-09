@@ -3,27 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
     "@storybook/addon-storyshots": "^5.2.1",
     "babel-plugin-macros": "^2.6.1",
     "bootstrap": "^4.3.1",
     "react": "^16.10.2",
+    "react-collapsed": "^2.2.2",
     "react-dom": "^16.10.2",
     "react-moment": "^0.9.2",
+    "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-slick": "^0.25.2",
     "react-test-renderer": "^16.10.2",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "require-context.macro": "^1.2.2",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^1.1.2",
     "uuid": "^3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:style": "postcss build src/styles/index.css -o src/index.css",
+    "start": "npm run build:style && react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "npm run build:style  && start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
@@ -46,6 +54,8 @@
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
-    "@storybook/react": "^5.2.1"
+    "@storybook/react": "^5.2.1",
+    "autoprefixer": "^9.6.4",
+    "postcss-cli": "^6.1.3"
   }
 }

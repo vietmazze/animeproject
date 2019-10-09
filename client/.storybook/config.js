@@ -1,12 +1,20 @@
 import { configure } from "@storybook/react";
 import requireContext from "require-context.macro";
+import { addParameters } from "@storybook/react";
+import { themes } from "@storybook/theming";
 
 import "../src/index.css";
 
-const req = requireContext("../src/components", true, /\.stories\.js$/);
+addParameters({
+  options: {
+    theme: themes.black
+  }
+});
 
-function loadStories() {
+const req = requireContext("../src/stories", true, /\.stories\.js$/);
+
+const loadStories = () => {
   req.keys().forEach(filename => req(filename));
-}
+};
 
 configure(loadStories, module);
