@@ -1,32 +1,33 @@
 import React, { Fragment, useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import hxh from "../../img/hunterxhunter.png";
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
 
-const Carousel = () => {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+import pic1 from "../../img/slideshow/image1.jpg";
+import pic2 from "../../img/slideshow/image2.jpg";
+import pic3 from "../../img/slideshow/image3.jpg";
+
+const Carousel = ({ anime }) => {
   return (
-    <div className="flex ">
-      <div className="lg:w-8/12  ">
-        <div className="container mx-auto  ">
-          <Slider {...settings} className=" text-white h-350  ">
-            <div className=" carousel-1  bg-cover bg-no-repeat h-full w-auto">
-              <div className=" absolute bottom-0 bg-gray-700 opacity-50 py-4 mb-1 h-24 w-full">
-                <h3>Hunter X Hunter</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
-              </div>
-            </div>
-            <div className="carousel-2 bg-cover bg-no-repeat h-350"></div>
-            <div className="carousel-3 bg-cover bg-no-repeat h-350"></div>
-          </Slider>
+    <div className="container mx-auto  mt-2">
+      <div className="flex flex-wrap">
+        <div className="w-8/12 ">
+          {anime.length === 0 ? (
+            <p>Test failed</p>
+          ) : (
+            <AwesomeSlider bullets={true}>
+              {anime.slice(0, 3).map(item => (
+                <div data-src={item.image}>
+                  {" "}
+                  <div className=" absolute bottom-0 left-0 bg-gray-700 opacity-50 py-4 mb-auto h-24 w-full text-white">
+                    <h3>Title:{item.title}</h3>
+                    <h4>Score: {item.score}</h4>
+                    <h4>Rank: {item.rank}</h4>
+                  </div>
+                </div>
+              ))}
+            </AwesomeSlider>
+          )}
         </div>
       </div>
     </div>

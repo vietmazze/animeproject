@@ -3,7 +3,7 @@ import { SET_LOADING, GET_ANIME, ANIME_ERROR } from "../actions/types";
 const initialState = {
   loading: false,
   error: null,
-  anime: null
+  animes: null
 };
 
 export default (state = initialState, action) => {
@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case GET_ANIME:
       return {
         ...state,
-        anime: action.payload,
+        animes: action.payload,
         loading: false
       };
     case SET_LOADING:

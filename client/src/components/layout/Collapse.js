@@ -1,5 +1,5 @@
-import React, { Fragment, useState, useEffect } from "react";
-import PropTypes from "prop-types";
+import React from "react";
+// import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useCollapse from "react-collapsed";
@@ -10,12 +10,12 @@ const Collapse = ({ task: { state } }) => {
   return (
     <div
       className={
-        "block " + (state == "invisible" ? "visible md:invisible" : "visible")
+        "block" + (state === "invisible" ? "unhidden md:hidden" : "unhidden")
       }
     >
-      <button {...getToggleProps()} className="flex items-center">
+      <button {...getToggleProps()} className="flex items-center ">
         {isOpen ? (
-          <FontAwesomeIcon icon={faBars} size="2x" className="fontawesome" />
+          <FontAwesomeIcon icon={faBars} size="2x" className="fontawesome " />
         ) : (
           <FontAwesomeIcon icon={faBars} size="2x" className="fontawesome" />
         )}

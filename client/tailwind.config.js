@@ -1,6 +1,5 @@
 module.exports = {
   theme: {
-    height: {},
     extend: {}
   },
   variants: {

@@ -1,15 +1,18 @@
 import React, { Fragment } from "react";
-import Navbar from "./components/layout/navbar";
-import Leftside from "./components/anime/leftside/main";
+import Navbar from "./components/layout/Navbar";
+import { Provider } from "react-redux";
+import store from "./store";
+import Headline from "./components/anime/leftside/headline";
 
 const App = () => {
   return (
-    <Fragment>
-      <Navbar />
-      <div className="container">
-        <Leftside />
-      </div>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        <Navbar />
+
+        <Headline />
+      </Fragment>
+    </Provider>
   );
 };
 

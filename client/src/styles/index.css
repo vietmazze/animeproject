@@ -5,17 +5,30 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+}
 .fontawesome {
   display: inline-block;
   width: 1.5em;
-  height: 1.5em;
+  height: auto;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
   color: rgba(255, 255, 255, 0.5);
 }
+@media screen and (min-width: 900px) {
+  .aws-sld {
+    height: 250px !important;
+  }
+}
 
-.carousel-1 {
-  background-image: url("../img/slideshow/image1.jpg");
+.aws-sld__controls__arrow-left,
+.aws-sld__controls__arrow-right {
+  transition: transform 0.05s ease-out 0.0025s, opacity 0.0025s !important;
+}
+.aws-btn {
+  --slider-transition-duration: 100ms !important;
 }

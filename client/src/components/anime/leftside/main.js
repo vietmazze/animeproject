@@ -4,9 +4,10 @@ import Recently from "./recentlyupdated";
 
 const Leftside = () => {
   return (
-    <div className="container">
-      <Headline />
-      <Recently />
+    <div className="flex ">
+      <div className="lg:w-8/12  ">
+        <Headline />
+      </div>
     </div>
   );
 };
