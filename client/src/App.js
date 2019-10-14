@@ -2,15 +2,16 @@ import React, { Fragment } from "react";
 import Navbar from "./components/layout/Navbar";
 import { Provider } from "react-redux";
 import store from "./store";
-import Headline from "./components/anime/leftside/headline";
+import Main from "./components/anime/leftside/main";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Fragment>
         <Navbar />
-
-        <Headline />
+        <div className="">
+          <Main />
+        </div>
       </Fragment>
     </Provider>
   );

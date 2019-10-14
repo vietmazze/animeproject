@@ -25,10 +25,17 @@ body {
   }
 }
 
-.aws-sld__controls__arrow-left,
-.aws-sld__controls__arrow-right {
-  transition: transform 0.05s ease-out 0.0025s, opacity 0.0025s !important;
+.h-325 {
+  height: 300px;
 }
-.aws-btn {
-  --slider-transition-duration: 100ms !important;
+
+.w-250 {
+  width: 185px;
+}
+
+.h-237 {
+  height: 237px;
+}
+.w-168 {
+  width: 168px;
 }
