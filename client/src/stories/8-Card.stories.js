@@ -1,25 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import Sidebar from "../components/layout/Sidebar";
+import Card from "../components/layout/Card";
 
-export const defaultTab = [
-  {
-    label: "Popular",
-    id: 1,
-    children: "this is recent tab"
-  },
-  {
-    label: "New",
-    id: 2,
-    children: "this is recent tab"
-  },
-  {
-    label: "Recent",
-    id: 3,
-    children: "this is recent tab"
-  }
-];
 const defaultAnime = [
   {
     id: 1,
@@ -79,6 +62,4 @@ const defaultAnime = [
 
 export const activeTab = "Popular";
 
-storiesOf("Sidebar", module).add("default", () => (
-  <Sidebar tab={defaultTab} anime={defaultAnime} activeTab={activeTab} />
-));
+storiesOf("Card", module).add("default", () => <Card anime={defaultAnime} />);
