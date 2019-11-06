@@ -8758,6 +8758,7 @@ video {
 html,
 body {
   height: 100%;
+  background-color: rgb(51, 51, 51);
 }
 
 .fontawesome {
@@ -8795,6 +8796,15 @@ body {
 
 .h-30 {
   height: 110px;
+}
+
+.__react_component_tooltip {
+  padding: 0px 0px !important;
+}
+
+.__react_component_tooltip.type-dark {
+  background-color: none !important;
+  width: 400px !important;
 }
 
 @media (min-width: 640px) {

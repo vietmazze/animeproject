@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Navbar from "./components/layout/Navbar";
 import { Provider } from "react-redux";
 import store from "./store";
-import Main from "./components/anime/leftside/main";
+import Main from "./components/anime/main";
 
 const App = () => {
   return (

@@ -57,10 +57,28 @@ const Tiptool = () => {
   // });
 
   return (
-    <div>
-      <button data-tip>Testing</button>
+    <div className="py-5 text-center">
+      <button data-tip data-for="overridePosition">
+        Testing
+      </button>
       <ReactTooltip
-        place="bottom"
+        id="overridePosition"
+        overridePosition={(
+          { left, top },
+          currentEvent,
+          currentTarget,
+          node
+        ) => {
+          const d = document.documentElement;
+
+          left = Math.min(d.clientWidth - node.clientWidth, left);
+          top = Math.min(d.clientHeight - node.clientHeight, top);
+
+          left = Math.max(0, left);
+          top = Math.max(0, top);
+
+          return { top, left };
+        }}
         getContent={() => {
           return <TipToolLayout anime={anime} />;
         }}

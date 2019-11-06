@@ -19,7 +19,7 @@ const Sidebar = ({ tab, anime, activeTab }) => {
                   {" "}
                   <img
                     className="object-cover h-full w-full"
-                    src={item.img}
+                    src={item.image_url}
                     alt=""
                   />
                 </a>

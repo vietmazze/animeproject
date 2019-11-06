@@ -2,7 +2,7 @@ import React from "react";
 
 const TipToolLayout = ({ anime }) => {
   return (
-    <div className="flex flex-col relative bg-gray-700  text-white w-3/5  h-325">
+    <div className="flex flex-col relative bg-gray-700  text-white w-full  h-64">
       <div className="px-3 ">
         <h1 className="text-3xl text-purple-500">{anime[0].title} </h1>
         <div className="border-0 bg-gray-500 font-thin text-sm mb-2">

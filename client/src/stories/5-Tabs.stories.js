@@ -24,19 +24,19 @@ export const defaultAnime = [
   {
     id: 1,
     title: "Vinland Saga",
-    img:
+    image_url:
       "https://cdn.myanimelist.net/images/anime/1500/103005.jpg?s=b21dbd168612f531ce4eec9bd53e272b"
   },
   {
     id: 2,
     title: "One Piece",
-    img:
+    image_url:
       "https://cdn.myanimelist.net/images/anime/6/73245.jpg?s=f792b8c9e28534ae455d06b15e686a14"
   },
   {
     id: 3,
     title: "Dr. Stone",
-    img:
+    image_url:
       "https://cdn.myanimelist.net/images/anime/1613/102576.jpg?s=44aa2af9cfc2523f9feb07d2b13d4196"
   }
 ];
