@@ -1,9 +1,15 @@
-import { SET_LOADING, GET_ANIME, ANIME_ERROR } from "../actions/types";
+import {
+  SET_LOADING,
+  GET_ANIME,
+  GET_AIRING,
+  ANIME_ERROR
+} from "../actions/types";
 
 const initialState = {
   loading: false,
   error: null,
-  animes: null
+  animes: null,
+  airing: null
 };
 
 export default (state = initialState, action) => {
@@ -12,6 +18,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         animes: action.payload,
+        loading: false
+      };
+    case GET_AIRING:
+      return {
+        ...state,
+        airing: action.payload,
         loading: false
       };
     case SET_LOADING:

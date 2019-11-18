@@ -53,3 +53,7 @@ body {
   background-color: none !important;
   width: 400px !important;
 }
+
+.left-3\/5 {
+  left: 45%;
+}

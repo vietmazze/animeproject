@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import { getAnime } from "../../../actions/animeAction";
+import { getAiring } from "../../../actions/animeAction";
 
-const Headline = ({ anime: { animes, loading }, getAnime }) => {
+const Headline = ({ anime: { animes, loading }, getAiring }) => {
   // const [anime, setAnime] = useState([]);
   // const [loading, setLoading] = useState(false);
   var settings = {
@@ -15,7 +15,7 @@ const Headline = ({ anime: { animes, loading }, getAnime }) => {
     slidesToScroll: 1
   };
   useEffect(() => {
-    getAnime();
+    getAiring();
     // eslint-disable-next-line
   }, []);
 
@@ -61,7 +61,4 @@ const Headline = ({ anime: { animes, loading }, getAnime }) => {
 const mapStateToProps = state => ({
   anime: state.anime
 });
-export default connect(
-  mapStateToProps,
-  { getAnime }
-)(Headline);
+export default connect(mapStateToProps, { getAiring })(Headline);

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from "react";
 import TopAnime from "./topAnime";
-import MainAnime from "./mainAnime";
+import ActiveAnime from "./activeAnime";
 import Tab from "../../layout/Tab";
 import Card from "../../layout/Card";
 
@@ -89,7 +89,7 @@ const SideBar = () => {
             />
           ))}
         </ul>
-        <MainAnime tab={tab} anime={anime} activeTab={activeTab} />
+        <ActiveAnime tab={tab} anime={anime} activeTab={activeTab} />
         <TopAnime tab={tab} anime={anime} activeTab={activeTab} />
       </div>
     </div>

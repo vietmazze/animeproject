@@ -7050,6 +7050,10 @@ video {
   left: 50%;
 }
 
+.left-3\/5 {
+  left: 45%;
+}
+
 .resize-none {
   resize: none;
 }
