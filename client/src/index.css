@@ -7050,10 +7050,6 @@ video {
   left: 50%;
 }
 
-.left-3\/5 {
-  left: 45%;
-}
-
 .resize-none {
   resize: none;
 }
@@ -8809,6 +8805,21 @@ body {
 .__react_component_tooltip.type-dark {
   background-color: none !important;
   width: 400px !important;
+}
+
+.left-3\/5 {
+  left: 45%;
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: 640px) {
