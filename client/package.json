@@ -30,7 +30,7 @@
     "uuid": "^3.3.3"
   },
   "scripts": {
-    "build:style": "postcss build src/styles/index.css -o src/index.css",
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
     "start": "npm run build:style && react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -52,7 +52,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:3000",
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",

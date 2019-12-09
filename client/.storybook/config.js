@@ -3,7 +3,7 @@ import requireContext from "require-context.macro";
 import { addParameters } from "@storybook/react";
 import { themes } from "@storybook/theming";
 
-import "../src/index.css";
+import "../src/styles/tailwind.css";
 
 addParameters({
   options: {

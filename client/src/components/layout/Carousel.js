@@ -3,9 +3,6 @@ import PropTypes from "prop-types";
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 
-import pic1 from "../../img/slideshow/image1.jpg";
-import pic2 from "../../img/slideshow/image2.jpg";
-import pic3 from "../../img/slideshow/image3.jpg";
 
 const Carousel = ({ anime }) => {
   return (
