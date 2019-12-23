@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Comments = ({ comments }) => {
   const [commentLoading, setCommentLoading] = useState(true);
@@ -19,6 +24,9 @@ const Comments = ({ comments }) => {
           className='h-24 w-full'
           placeholder='Join the discussion...'
         />
+        <button className='bg-blue-500 text-white py-2 px-4 flex  ml-auto m-4'>
+          Submit
+        </button>
       </div>
     );
   } else {
@@ -45,11 +53,25 @@ const Comments = ({ comments }) => {
               className='h-24 w-full'
               placeholder='Join the discussion...'
             />
+            <h1>LOG IN WITH</h1>
+
+            <div className='flex flex-row'>
+              <button className='fa-layers fa-fw rounded-full bg-red-300 items-center justify-center mr-3'>
+                <FontAwesomeIcon icon={faGoogle} size='1x' color='white' />
+              </button>
+              <button className='fa-layers fa-fw rounded-full bg-blue-300 mr-3'>
+                <FontAwesomeIcon icon={faFacebookF} size='1x' color='white' />
+              </button>
+              <button className='fa-layers fa-fw rounded-full bg-blue-300 '>
+                <FontAwesomeIcon icon={faTwitter} size='1x' color='white' />
+              </button>
+              <button className='bg-blue-500 text-white  px-4 flex  ml-auto '>
+                Submit
+              </button>
+            </div>
           </div>
         </div>
-        <button className='bg-blue-500 text-white py-2 px-4 flex  ml-auto m-4'>
-          Submit
-        </button>
+
         <div>
           {!commentLoading ? (
             <div> Be the first to comment ... </div>
@@ -71,13 +93,39 @@ const Comments = ({ comments }) => {
                     <h3> Username</h3>
                     <p>Some comment</p>
                   </div>
-                  <button onClick={onReplyClick}>Reply</button>
+                  <div className='flex flex-row '>
+                    <button className='fa-layers fa-fw hover:opacity-25'>
+                      <FontAwesomeIcon
+                        icon={faArrowUp}
+                        size='xs'
+                        color='white'
+                        transform='down-4'
+                      />
+                    </button>
+
+                    <button className='fa-layers fa-fw hover:opacity-25'>
+                      <FontAwesomeIcon
+                        icon={faArrowDown}
+                        size='xs'
+                        color='white'
+                        transform='down-4'
+                      />
+                    </button>
+
+                    <button
+                      className='hover:opacity-25 text-white pl-2'
+                      onClick={onReplyClick}
+                    >
+                      Reply
+                    </button>
+                  </div>
+
+                  {reply}
                 </div>
               </div>
             </div>
           )}
         </div>
-        {reply}
       </div>
     </div>
   );
