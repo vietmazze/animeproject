@@ -6,14 +6,6 @@ const config = require("config");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
-// @route       GET api/users
-// @desc        Get logged in user
-// @access      Private
-
-router.get("/", (req, res) => {
-  res.send("Get logged in");
-});
-
 // @route       POST api/users
 // @desc        Regster a user
 // @access      Public
@@ -72,7 +64,7 @@ router.post(
           res.json({ token });
         }
       );
-    } catch (error) {
+    } catch (err) {
       console.error(err.message);
       res.status(500).send("Server error");
     }

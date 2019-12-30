@@ -9,11 +9,6 @@ const MessageSchema = new Schema({
   comment: {
     type: String,
     required: true
-  },
-
-  anime: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "animes"
   }
 });
 

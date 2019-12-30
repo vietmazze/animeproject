@@ -2,14 +2,16 @@ import {
   SET_LOADING,
   GET_ANIME,
   GET_AIRING,
-  ANIME_ERROR
+  ANIME_ERROR,
+  LOGIN_ENABLE
 } from "../actions/types";
 
 const initialState = {
   loading: false,
   error: null,
   animes: null,
-  airing: null
+  airing: null,
+  login: false
 };
 
 export default (state = initialState, action) => {
@@ -37,6 +39,11 @@ export default (state = initialState, action) => {
         ...state,
         error: action.payload,
         loading: false
+      };
+    case LOGIN_ENABLE:
+      return {
+        ...state,
+        login: true
       };
     default:
       return state;

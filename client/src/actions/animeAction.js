@@ -1,4 +1,10 @@
-import { SET_LOADING, GET_ANIME, ANIME_ERROR, GET_AIRING } from "./types";
+import {
+  SET_LOADING,
+  GET_ANIME,
+  ANIME_ERROR,
+  GET_AIRING,
+  LOGIN_ENABLE
+} from "./types";
 import axios from "axios";
 
 // Get anime from api server
@@ -43,5 +49,11 @@ export const getUpcoming = () => async dispatch => {
 export const setLoading = () => {
   return {
     type: SET_LOADING
+  };
+};
+
+export const setLoginEnable = () => {
+  return {
+    type: LOGIN_ENABLE
   };
 };

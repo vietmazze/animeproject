@@ -10,7 +10,25 @@ body {
   height: 100%;
   background-color: rgb(51, 51, 51);
 }
-
+.popup_inner {
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  top: 30%;
+  bottom: 30%;
+  margin: auto;
+  background-color: #1a1920;
+}
+.login {
+  opacity: 0.9;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 50;
+}
 .fontawesome {
   display: inline-block;
   width: 1.5em;

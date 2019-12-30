@@ -19,10 +19,10 @@ const Tabs = ({ tab, anime }) => {
   const className = "tab-list-item";
 
   return (
-    <div className="tabs px-4 py-4 mt-16 h-full border border-gray-500 ">
-      <div className=" flex flex-col border-b ">
-        <ul className="flex ">
-          <h2 className="pr-8 py-2 font-semibold ">RECENTLY UPDATED</h2>
+    <div className='tabs px-4 py-4 mt-16 h-full border border-gray-500 '>
+      <div className=' flex flex-col border-b '>
+        <ul className='flex '>
+          <h2 className='pr-8 py-2 font-semibold '>RECENTLY UPDATED</h2>
           {tab.map(child => (
             <Tab
               onClick={onClickTabItem}
