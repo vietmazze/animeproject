@@ -11,7 +11,8 @@ const initialState = {
   error: null,
   animes: null,
   airing: null,
-  login: false
+  login: false,
+  loginToken: {}
 };
 
 export default (state = initialState, action) => {
@@ -43,8 +44,9 @@ export default (state = initialState, action) => {
     case LOGIN_ENABLE:
       return {
         ...state,
-        login: true
+        login: action.payload
       };
+
     default:
       return state;
   }

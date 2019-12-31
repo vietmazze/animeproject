@@ -9,7 +9,7 @@ import { setLoginEnable } from "../../actions/animeAction";
 
 const Navbar = ({ anime: { animes, login }, setLoginEnable }) => {
   const loginClick = () => {
-    setLoginEnable();
+    setLoginEnable(!login);
   };
 
   useEffect(() => {

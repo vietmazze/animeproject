@@ -3,9 +3,36 @@ import {
   GET_ANIME,
   ANIME_ERROR,
   GET_AIRING,
-  LOGIN_ENABLE
+  LOGIN_ENABLE,
+  LOGIN_SUCCESS,
+  REGISTER_SUCCESS,
+  LOGIN_FAIL
 } from "./types";
 import axios from "axios";
+
+// Login the user to api server
+
+const headers = {
+  "Content-Type": "application/json"
+};
+export const getLogin = loginData => async dispatch => {
+  try {
+    console.log(loginData);
+    const res = await axios.post("http://localhost:5000/api/auth", loginData, {
+      headers: headers
+    });
+    console.log(res.data);
+    dispatch({
+      type: LOGIN_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGIN_FAIL,
+      payload: err.message
+    });
+  }
+};
 
 // Get anime from api server
 
@@ -52,8 +79,9 @@ export const setLoading = () => {
   };
 };
 
-export const setLoginEnable = () => {
+export const setLoginEnable = login => {
   return {
-    type: LOGIN_ENABLE
+    type: LOGIN_ENABLE,
+    payload: login
   };
 };
