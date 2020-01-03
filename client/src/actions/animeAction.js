@@ -5,16 +5,41 @@ import {
   GET_AIRING,
   LOGIN_ENABLE,
   LOGIN_SUCCESS,
+  LOGIN_FAIL,
+  REGISTER_ENABLE,
   REGISTER_SUCCESS,
-  LOGIN_FAIL
+  REGISTER_FAIL
 } from "./types";
 import axios from "axios";
-
-// Login the user to api server
 
 const headers = {
   "Content-Type": "application/json"
 };
+
+//Register user and return token
+export const getRegister = registerData => async dispatch => {
+  try {
+    const res = await axios.post(
+      "http://localhost:5000/api/users",
+      registerData,
+      { headers: headers }
+    );
+    console.log(res.data);
+    dispatch({
+      type: REGISTER_SUCCESS,
+      payload: res.data
+    });
+  } catch (err) {
+    console.log(err.data.msg);
+    dispatch({
+      type: REGISTER_FAIL,
+      payload: err.message
+    });
+  }
+};
+
+// Login the user to api server and return token
+
 export const getLogin = loginData => async dispatch => {
   try {
     console.log(loginData);
@@ -83,5 +108,12 @@ export const setLoginEnable = login => {
   return {
     type: LOGIN_ENABLE,
     payload: login
+  };
+};
+
+export const setRegisterEnable = register => {
+  return {
+    type: REGISTER_ENABLE,
+    payload: register
   };
 };

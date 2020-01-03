@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 import animeReducer from "./animeReducer";
-import loginReducer from "./animeReducer";
+import authReducer from "./authReducer";
 
 export default combineReducers({
   anime: animeReducer,
-  login: loginReducer
+  auth: authReducer
 });

@@ -3,7 +3,8 @@ import {
   GET_ANIME,
   GET_AIRING,
   ANIME_ERROR,
-  LOGIN_ENABLE
+  LOGIN_ENABLE,
+  REGISTER_ENABLE
 } from "../actions/types";
 
 const initialState = {
@@ -12,7 +13,8 @@ const initialState = {
   animes: null,
   airing: null,
   login: false,
-  loginToken: {}
+  loginToken: {},
+  register: false
 };
 
 export default (state = initialState, action) => {
@@ -45,6 +47,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         login: action.payload
+      };
+    case REGISTER_ENABLE:
+      return {
+        ...state,
+        register: action.payload
       };
 
     default:

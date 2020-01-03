@@ -2,13 +2,15 @@ import {
   LOGIN_ENABLE,
   LOGIN_SUCCESS,
   REGISTER_SUCCESS,
-  LOGIN_FAIL
+  LOGIN_FAIL,
+  REGISTER_FAIL
 } from "../actions/types";
 
 const initialState = {
   loginToken: {},
   loginFail: {},
-  isAuthenticated: false
+  isAuthenticated: false,
+  registerFail: {}
 };
 
 export default (state = initialState, action) => {
@@ -29,7 +31,22 @@ export default (state = initialState, action) => {
         isAuthenticated: false,
         loginFail: action.payload
       };
+    case REGISTER_SUCCESS:
+      localStorage.setItem("token", action.payload.token);
+      return {
+        ...state,
+        loginToken: action.payload.token,
+        isAuthenticated: true
+      };
 
+    case REGISTER_FAIL:
+      localStorage.removeItem("token");
+      return {
+        ...state,
+        loginToken: null,
+        isAuthenticated: false,
+        registerFail: action.payload
+      };
     default:
       return state;
   }
