@@ -8,9 +8,12 @@ import {
   LOGIN_FAIL,
   REGISTER_ENABLE,
   REGISTER_SUCCESS,
-  REGISTER_FAIL
+  REGISTER_FAIL,
+  SET_ALERT,
+  REMOVE_ALERT
 } from "./types";
 import axios from "axios";
+import uuid from "uuid";
 
 const headers = {
   "Content-Type": "application/json"
@@ -24,16 +27,15 @@ export const getRegister = registerData => async dispatch => {
       registerData,
       { headers: headers }
     );
-    console.log(res.data);
+
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
     });
   } catch (err) {
-    console.log(err.data.msg);
     dispatch({
       type: REGISTER_FAIL,
-      payload: err.message
+      payload: err.response.data.msg
     });
   }
 };
@@ -42,11 +44,10 @@ export const getRegister = registerData => async dispatch => {
 
 export const getLogin = loginData => async dispatch => {
   try {
-    console.log(loginData);
     const res = await axios.post("http://localhost:5000/api/auth", loginData, {
       headers: headers
     });
-    console.log(res.data);
+
     dispatch({
       type: LOGIN_SUCCESS,
       payload: res.data
@@ -54,8 +55,9 @@ export const getLogin = loginData => async dispatch => {
   } catch (err) {
     dispatch({
       type: LOGIN_FAIL,
-      payload: err.message
+      payload: err.response.data.msg
     });
+    console.log(err.response.data.msg);
   }
 };
 
@@ -66,7 +68,7 @@ export const getAiring = () => async dispatch => {
     setLoading();
 
     const res = await axios.get("https://api.jikan.moe/v3/top/anime/1/airing");
-    console.log(res.data.top);
+
     dispatch({
       type: GET_ANIME,
       payload: res.data.top
@@ -85,7 +87,7 @@ export const getUpcoming = () => async dispatch => {
     const res = await axios.get(
       "https://api.jikan.moe/v3/top/anime/1/upcoming"
     );
-    console.log(res.data.top);
+
     dispatch({
       type: GET_AIRING,
       payload: res.data.top

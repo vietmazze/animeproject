@@ -4,12 +4,14 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Main from "./components/anime/main";
 import Login from "./components/layout/Login";
+import Alerts from "./components/layout/Alerts";
 
 const App = () => {
   return (
     <Provider store={store}>
       <Fragment>
-        <Login />
+        <Login></Login>
+
         <Navbar />
         <div className=''>
           <Main />

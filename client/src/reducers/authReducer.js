@@ -3,14 +3,17 @@ import {
   LOGIN_SUCCESS,
   REGISTER_SUCCESS,
   LOGIN_FAIL,
-  REGISTER_FAIL
+  REGISTER_FAIL,
+  SET_ALERT,
+  REMOVE_ALERT
 } from "../actions/types";
 
 const initialState = {
   loginToken: {},
   loginFail: {},
   isAuthenticated: false,
-  registerFail: {}
+  registerFail: {},
+  alerts: {}
 };
 
 export default (state = initialState, action) => {
@@ -47,6 +50,7 @@ export default (state = initialState, action) => {
         isAuthenticated: false,
         registerFail: action.payload
       };
+
     default:
       return state;
   }

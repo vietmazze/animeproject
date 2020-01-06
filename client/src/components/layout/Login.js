@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { setLoginEnable } from "../../actions/animeAction";
 import { setRegisterEnable } from "../../actions/animeAction";
 import { getLogin } from "../../actions/animeAction";
 import { getRegister } from "../../actions/animeAction";
+import { setAlert } from "../../actions/alertAction";
+import { setLoading } from "../../actions/animeAction";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import Alerts from "../layout/Alerts";
+import Spinner from "./Spinner";
+
 const Login = ({
-  auth: { loginToken, isAuthenticated },
-  anime: { animes, login, register },
+  auth: { loginToken, isAuthenticated, loginFail, registerFail },
+  anime: { loading, login, register },
   setLoginEnable,
   setRegisterEnable,
   getLogin,
-  getRegister
+  getRegister,
+  setAlert,
+  setLoading
 }) => {
   const onClose = () => {
     login = false;
@@ -21,27 +28,46 @@ const Login = ({
     setRegisterEnable(register);
   };
 
-  const onLoginSubmit = e => {
-    e.preventDefault();
+  useEffect(() => {
+    if (loginFail === "Invalid Credentials") {
+      setAlert(loginFail, "red-500");
+    }
+    //eslint-disable-next-line
+  }, [loginFail, isAuthenticated, loading]);
 
-    const loginData = { email: e.target[0].value, password: e.target[1].value };
-    console.log(loginData);
-    getLogin(loginData);
-    onClose();
+  const onLoginSubmit = e => {
+    setLoading();
+    console.log(loading);
+    e.preventDefault();
+    if (e.target[0].value === "" || e.target[1].value === "") {
+      setAlert("Please fill in all fields", "red-500");
+    } else {
+      const loginData = {
+        email: e.target[0].value,
+        password: e.target[1].value
+      };
+
+      getLogin(loginData);
+      onClose();
+    }
   };
 
   const onRegisterSubmit = e => {
     e.preventDefault();
     // make sure you compare password later
-    const registerData = {
-      name: e.target[0].value,
-      email: e.target[1].value,
-      password: e.target[2].value
-    };
-    console.log(registerData);
-    getRegister(registerData);
-    console.log(loginToken);
-    onClose();
+    if (e.target[0].value === "" || e.target[1].value === "") {
+      setAlert("Please fill in all fields", "red-500");
+    } else {
+      const registerData = {
+        name: e.target[0].value,
+        email: e.target[1].value,
+        password: e.target[2].value
+      };
+
+      getRegister(registerData);
+
+      onClose();
+    }
   };
 
   const onSignUp = e => {
@@ -82,7 +108,7 @@ const Login = ({
             className='flex flex-col items-center content-center h-full text-center'
           >
             <h1 className='text-5xl text-red-500 font-bold'>Member Login</h1>
-
+            {loading ? <Spinner /> : <Alerts />}
             <input
               className='py-2 px-4 w-full bg-gray-300 border border-solid border-black'
               type='email'
@@ -114,9 +140,8 @@ const Login = ({
         </div>
       </div>
     );
-    console.log("activelogin");
   } else {
-    console.log("not work");
+    console.log("Login is not active");
   }
 
   if (register === true) {
@@ -143,6 +168,7 @@ const Login = ({
             className='flex flex-col items-center content-center h-full text-center'
           >
             <h1 className='text-5xl text-red-500 font-bold'>Register</h1>
+            <Alerts />
             <input
               className='py-2 px-4 w-full bg-gray-300 border border-solid border-black'
               type='text'
@@ -185,13 +211,12 @@ const Login = ({
     console.log("activeregister");
     console.log(loginToken);
   } else {
-    console.log("not work");
+    console.log("Register no active");
   }
 
   return (
     <div>
-      {" "}
-      {activelogin} {activeregister}
+      <Alerts /> {activelogin} {activeregister}
     </div>
   );
 };
@@ -205,5 +230,6 @@ export default connect(mapStateToProps, {
   setLoginEnable,
   setRegisterEnable,
   getLogin,
-  getRegister
+  getRegister,
+  setAlert
 })(Login);
