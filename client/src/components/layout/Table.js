@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
 const Table = ({ tab, anime, activeTab }) => {
   const defaultAnime = [
@@ -55,22 +56,22 @@ const Table = ({ tab, anime, activeTab }) => {
             {activeTab === "Recent" ? (
               <p> Recent</p>
             ) : (
-              <div className="flex flex-row flex-wrap">
+              <div className='flex flex-row flex-wrap'>
                 {anime.slice(0, 6).map(item => (
-                  <div className="px-1 py-2 mb-4 h-325 w-250 ">
-                    <div className=" object-cover">
-                      <a href={item.url}>
+                  <div className='px-1 py-2 mb-4 h-325 w-250 '>
+                    <div className=' object-cover'>
+                      <Link to={`/watch/${item.title}`}>
                         <img
                           src={item.image_url}
-                          alt=""
-                          className="h-237 w-full"
+                          alt=''
+                          className='h-237 w-full'
                         ></img>
-                      </a>
+                      </Link>
                     </div>
-                    <div className=" text-wrap text-center text-black  object-contain w-full ">
-                      <a href={item.image_url} className="">
+                    <div className=' text-wrap text-center text-black  object-contain w-full '>
+                      <Link to={`/watch/${item.title}`} className=''>
                         {item.title}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}

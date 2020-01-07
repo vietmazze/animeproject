@@ -8,12 +8,9 @@ import {
   LOGIN_FAIL,
   REGISTER_ENABLE,
   REGISTER_SUCCESS,
-  REGISTER_FAIL,
-  SET_ALERT,
-  REMOVE_ALERT
+  REGISTER_FAIL
 } from "./types";
 import axios from "axios";
-import uuid from "uuid";
 
 const headers = {
   "Content-Type": "application/json"

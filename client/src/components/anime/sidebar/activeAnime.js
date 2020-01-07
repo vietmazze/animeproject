@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -13,23 +14,23 @@ const activeAnime = ({ anime }) => {
   };
 
   return (
-    <div className="h-40 w-full">
+    <div className='h-40 w-full'>
       <div
-        className="  relative h-full  bg-cover bg-center bg-no-repeat"
+        className='  relative h-full  bg-cover bg-center bg-no-repeat'
         style={divStyle}
       >
-        <div className="absolute bottom-1/2 left-3/5 opacity-75">
-          <a className="" href={anime[0].url}>
-            <FontAwesomeIcon icon={faPlayCircle} size="3x" />
-          </a>
+        <div className='absolute bottom-1/2 left-3/5 opacity-75'>
+          <Link className='' to={`/watch/${anime[0].title}`}>
+            <FontAwesomeIcon icon={faPlayCircle} size='3x' />
+          </Link>
         </div>
 
-        <div className="absolute bottom-0 text-white px-2">
-          <a className=" text-white" href={anime[0].url}>
+        <div className='absolute bottom-0 text-white px-2'>
+          <Link className=' text-white' to={`/watch/${anime[0].title}`}>
             {anime[0].title}
-          </a>
-          <div className=" flex row text-xs   ">
-            <span className="pr-2">
+          </Link>
+          <div className=' flex row text-xs   '>
+            <span className='pr-2'>
               <FontAwesomeIcon icon={faEye} /> {anime[0].view}
             </span>
             <span>

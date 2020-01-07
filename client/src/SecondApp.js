@@ -1,11 +1,10 @@
 import React, { Fragment } from "react";
 import Navbar from "./components/layout/Navbar";
+import Login from "./components/layout/Login";
+import Main from "./components/watch/main";
 import { Provider } from "react-redux";
 import store from "./store";
-import Main from "./components/anime/main";
-import Login from "./components/layout/Login";
-
-const App = () => {
+const secondApp = () => {
   return (
     <Provider store={store}>
       <Fragment>
@@ -20,4 +19,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default secondApp;

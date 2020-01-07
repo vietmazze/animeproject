@@ -22,6 +22,7 @@ const Login = ({
   setLoading
 }) => {
   const onClose = () => {
+    loading = false;
     login = false;
     register = false;
     setLoginEnable(login);
@@ -36,9 +37,9 @@ const Login = ({
   }, [loginFail, isAuthenticated, loading]);
 
   const onLoginSubmit = e => {
-    setLoading();
-    console.log(loading);
     e.preventDefault();
+    setLoading();
+
     if (e.target[0].value === "" || e.target[1].value === "") {
       setAlert("Please fill in all fields", "red-500");
     } else {
@@ -108,7 +109,7 @@ const Login = ({
             className='flex flex-col items-center content-center h-full text-center'
           >
             <h1 className='text-5xl text-red-500 font-bold'>Member Login</h1>
-            {loading ? <Spinner /> : <Alerts />}
+            {!loading ? <Alerts /> : <Spinner />}
             <input
               className='py-2 px-4 w-full bg-gray-300 border border-solid border-black'
               type='email'
@@ -231,5 +232,6 @@ export default connect(mapStateToProps, {
   setRegisterEnable,
   getLogin,
   getRegister,
-  setAlert
+  setAlert,
+  setLoading
 })(Login);

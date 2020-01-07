@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -25,18 +26,18 @@ const Navbar = ({ anime: { animes, login }, setLoginEnable }) => {
 
           <ul className='relative flex object-center text-lg invisible md:visible '>
             <li className=' text-white'>
-              <a className=' text-blue-500 active:text-blue-500' href='/home'>
+              <Link className=' text-blue-500 active:text-blue-500' to='/'>
                 Home
-              </a>
+              </Link>
             </li>
             <li className='pl-4 text-white hover:text-gray-500'>
-              <a href='/title'>News</a>
+              <Link to='/watch'>Watch</Link>
             </li>
             <li className='pl-4 text-white hover:text-gray-500'>
-              <a href='/contact'>Contact</a>
+              <Link to='/contact'>Contact</Link>
             </li>
             <li className='pl-4 text-white hover:text-gray-500'>
-              <a href='/about'>About</a>
+              <Link to='/about'>About</Link>
             </li>
           </ul>
 
