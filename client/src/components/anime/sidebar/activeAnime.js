@@ -14,9 +14,9 @@ const activeAnime = ({ anime }) => {
   };
 
   return (
-    <div className='h-40 w-full'>
+    <div className='h-40 w-full '>
       <div
-        className='  relative h-full  bg-cover bg-center bg-no-repeat'
+        className='  relative  h-full  bg-cover bg-center bg-no-repeat'
         style={divStyle}
       >
         <div className='absolute bottom-1/2 left-3/5 opacity-75'>

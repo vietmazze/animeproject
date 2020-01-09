@@ -41,11 +41,11 @@ const Navbar = ({ anime: { animes, login }, setLoginEnable }) => {
             </li>
           </ul>
 
-          <ul className=' text-lg ml-auto mr-3'>
+          <ul className=' text-lg ml-auto '>
             <li className='px-4 text-white'>
               <button onClick={loginClick} className=''>
                 <FontAwesomeIcon icon={faUser} />
-                <h3 className=' pl-2 inline invisible lg:visible hover:text-gray-500'>
+                <h3 className=' pl-2 hidden md:inline hover:text-gray-500'>
                   Login
                 </h3>
               </button>

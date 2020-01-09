@@ -10,47 +10,44 @@ const VideoPlayer = () => {
 
   const onClickEvent = e => {
     console.log(e.target.id);
-    setActivecolor("black");
+    setActivecolor("red");
   };
 
   return (
-    <div
-      className="container mx-auto mt-1"
-      style={{ backgroundColor: activeColor }}
-    >
-      <div className="flex  ">
-        <div className="w-full lg:w-9/12 ">
-          <div className="player-wrapper">
+    <div className='' style={{ backgroundColor: activeColor }}>
+      <div className='flex  '>
+        <div className='w-full lg:w-9/12 '>
+          <div className='player-wrapper'>
             <ReactPlayer
-              className="react-player"
-              url="https://www.youtube.com/watch?v=LMTGQqUUyzk"
-              width="100%"
-              height="100%"
-              controls="true"
+              className='react-player'
+              url='https://www.youtube.com/watch?v=LMTGQqUUyzk'
+              width='100%'
+              height='100%'
+              controls='true'
             />
           </div>
-          <div className="flex flex-row ">
-            <button className=" py-2 m-2" id="autoplay" onClick={onClickEvent}>
-              <span className="pr-1">
-                <FontAwesomeIcon icon={faSquare} size="xs" />
+          <div className='flex flex-row '>
+            <button className=' py-2 m-2' id='autoplay' onClick={onClickEvent}>
+              <span className='pr-1'>
+                <FontAwesomeIcon icon={faSquare} size='xs' />
               </span>
               Auto Play
             </button>
-            <button className=" py-2 m-2" id="autonext" onClick={onClickEvent}>
-              <span className="pr-1">
-                <FontAwesomeIcon icon={faSquare} size="xs" />
+            <button className=' py-2 m-2' id='autonext' onClick={onClickEvent}>
+              <span className='pr-1'>
+                <FontAwesomeIcon icon={faSquare} size='xs' />
               </span>
               Auto Next
             </button>
-            <button className=" py-2 m-2" id="lightoff" onClick={onClickEvent}>
-              <span className="pr-1">
-                <FontAwesomeIcon icon={faLightbulb} size="xs" />
+            <button className=' py-2 m-2' id='lightoff' onClick={onClickEvent}>
+              <span className='pr-1'>
+                <FontAwesomeIcon icon={faLightbulb} size='xs' />
               </span>
               Light Off
             </button>
-            <button className=" py-2 m-2" id="bookmark" onClick={onClickEvent}>
-              <span className="pr-1">
-                <FontAwesomeIcon icon={faLightbulb} size="xs" />{" "}
+            <button className=' py-2 m-2' id='bookmark' onClick={onClickEvent}>
+              <span className='pr-1'>
+                <FontAwesomeIcon icon={faLightbulb} size='xs' />{" "}
               </span>{" "}
               Bookmark
             </button>

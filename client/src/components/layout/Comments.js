@@ -57,13 +57,13 @@ const Comments = ({ comments }) => {
 
             <div className='flex flex-row'>
               <button className='fa-layers fa-fw rounded-full bg-red-300 items-center justify-center mr-3'>
-                <FontAwesomeIcon icon={faGoogle} size='1x' color='white' />
+                <FontAwesomeIcon icon={faGoogle} size='1x' color='black' />
               </button>
               <button className='fa-layers fa-fw rounded-full bg-blue-300 mr-3'>
-                <FontAwesomeIcon icon={faFacebookF} size='1x' color='white' />
+                <FontAwesomeIcon icon={faFacebookF} size='1x' color='black' />
               </button>
               <button className='fa-layers fa-fw rounded-full bg-blue-300 '>
-                <FontAwesomeIcon icon={faTwitter} size='1x' color='white' />
+                <FontAwesomeIcon icon={faTwitter} size='1x' color='black' />
               </button>
               <button className='bg-blue-500 text-white  px-4 flex  ml-auto '>
                 Submit

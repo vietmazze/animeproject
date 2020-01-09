@@ -48,7 +48,7 @@ const Table = ({ tab, anime, activeTab }) => {
   ];
   return (
     //This is not presentational
-    <div>
+    <div className=''>
       {tab.map(child => {
         if (child.label !== activeTab) return undefined;
         return (
@@ -56,10 +56,10 @@ const Table = ({ tab, anime, activeTab }) => {
             {activeTab === "Recent" ? (
               <p> Recent</p>
             ) : (
-              <div className='flex flex-row flex-wrap'>
+              <div className='flex flex-row flex-wrap  '>
                 {anime.slice(0, 6).map(item => (
                   <div className='px-1 py-2 mb-4 h-325 w-250 '>
-                    <div className=' object-cover'>
+                    <div className='  '>
                       <Link to={`/watch/${item.title}`}>
                         <img
                           src={item.image_url}
