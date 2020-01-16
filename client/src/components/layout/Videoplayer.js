@@ -16,7 +16,7 @@ const VideoPlayer = () => {
   return (
     <div className='' style={{ backgroundColor: activeColor }}>
       <div className='flex  '>
-        <div className='w-full lg:w-9/12 '>
+        <div className='w-full  '>
           <div className='player-wrapper'>
             <ReactPlayer
               className='react-player'

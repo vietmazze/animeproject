@@ -26,7 +26,7 @@ const Navbar = ({ anime: { animes, login }, setLoginEnable }) => {
 
           <ul className='relative flex object-center text-lg invisible md:visible '>
             <li className=' text-white'>
-              <Link className=' text-blue-500 active:text-blue-500' to='/'>
+              <Link className=' text-color' to='/'>
                 Home
               </Link>
             </li>

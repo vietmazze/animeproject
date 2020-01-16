@@ -7,10 +7,10 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
-    <div className='pt-5 mt-2 border-t-8 border-gray-600'>
+    <div className='pt-5 mt-2 border-t-8 border-gray-600 font-Roboto'>
       <div className='md:flex flex-row'>
         <ul className='hidden md:block w-1/5'>
-          <li>HELP</li>
+          <li className='text-color'>HELP</li>
           <li>
             {" "}
             <Link to='/'>Contact</Link>{" "}
@@ -26,7 +26,7 @@ const Footer = () => {
           </li>
         </ul>
         <ul className=' hidden md:block w-1/5'>
-          <li>HELP</li>
+          <li className='text-color'>HELP</li>
           <li>
             {" "}
             <Link to='/'>Newest</Link>{" "}

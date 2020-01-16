@@ -7,10 +7,10 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const TopAnime = ({ tab, anime, activeTab }) => {
   let comp;
 
-  if (activeTab === "Recent") {
-    comp = <h1 className='text-white'> Recent</h1>;
-  } else if (activeTab === "New") {
-    comp = <h1 className='text-white'> New </h1>;
+  if (activeTab === "Week") {
+    comp = <h1 className='text-white'> Week</h1>;
+  } else if (activeTab === "Month") {
+    comp = <h1 className='text-white'> Month </h1>;
   } else {
     comp = (
       <div className='flex flex-row flex-wrap '>
@@ -23,7 +23,7 @@ const TopAnime = ({ tab, anime, activeTab }) => {
               <div className='border border-solid border-gray-500  px-3 '>
                 <i className='  '>{item.id}</i>
               </div>
-              <div className='  h-20 w-12 ml-2 '>
+              <div className=' h-20 w-12 ml-2 '>
                 <Link to={`/watch/${item.title}`}>
                   {" "}
                   <img
@@ -33,7 +33,7 @@ const TopAnime = ({ tab, anime, activeTab }) => {
                   />
                 </Link>
               </div>
-              <div className='   ml-3 w-40 font-style: italic'>
+              <div className='   ml-3 w-40 font-Roboto font-style: italic'>
                 <Link to={`/watch/${item.title}`}>
                   <h2>{item.title}</h2>
                 </Link>

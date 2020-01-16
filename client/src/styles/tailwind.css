@@ -686,7 +686,9 @@ video {
      -moz-appearance: none;
           appearance: none;
 }
-
+.bg-theme-color {
+  background-color: #ca3e47;
+}
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -11803,7 +11805,16 @@ video {
 html,
 body {
   height: 100%;
-  background-color: rgb(51, 51, 51);
+  background-color: #161c27;
+  font-family: Roboto, sans-serif;
+}
+
+.title-text {
+  color: #888;
+}
+
+.text-color {
+  color: #ca3e47;
 }
 
 .popup_inner {

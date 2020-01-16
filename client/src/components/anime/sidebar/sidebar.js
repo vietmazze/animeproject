@@ -5,21 +5,21 @@ import Tab from "../../layout/Tab";
 import Card from "../../layout/Card";
 
 const SideBar = () => {
-  const [activeTab, setActive] = useState("Popular");
+  const [activeTab, setActive] = useState("Day");
 
   const tab = [
     {
-      label: "Popular",
+      label: "Day",
       id: 1,
       children: "this is recent tab"
     },
     {
-      label: "New",
+      label: "Week",
       id: 2,
       children: "this is recent tab"
     },
     {
-      label: "Recent",
+      label: "Month",
       id: 3,
       children: "this is recent tab"
     }
@@ -76,10 +76,10 @@ const SideBar = () => {
     setActive(tab);
   };
   return (
-    <div className="tabs px-4 mt-2 h-full  ">
-      <div className=" flex flex-col  ">
-        <ul className="flex ">
-          <h2 className="pr-4 py-2 font-semibold ">TOP ANIME</h2>
+    <div className='tabs px-4 mt-2 h-full  '>
+      <div className=' flex flex-col  '>
+        <ul className='flex flex-row '>
+          <h2 className='pr-4 py-2 font-semibold text-color '>TOP ANIME</h2>
           {tab.map(child => (
             <Tab
               onClick={onClickTabItem}

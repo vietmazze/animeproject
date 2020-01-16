@@ -9,11 +9,11 @@ const Tab = ({ label, onClick, activeTab }) => {
     "btn inline-block py-2 pr-2  hover:text-blue-800 font-semibold w-full";
 
   if (activeTab === label) {
-    className += " text-blue-500";
+    className += " text-white";
   }
 
   return (
-    <li className="-mb-px mr-1" onClick={onClickName}>
+    <li className='-mb-px mr-1' onClick={onClickName}>
       <button className={className}>{label} </button>
     </li>
   );

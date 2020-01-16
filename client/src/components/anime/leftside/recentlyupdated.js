@@ -46,10 +46,12 @@ const Recently = () => {
   const className = "tab-list-item";
 
   return (
-    <div className="tabs px-4 py-4 mt-16 h-full border border-gray-500 ">
-      <div className=" flex border-b ">
-        <h2 className="pr-4 py-2 font-semibold ">RECENTLY UPDATED</h2>
-        <ul className="flex border-b">
+    <div className='tabs px-4 py-4 mt-4 h-full border border-gray-500 '>
+      <div className=' flex border-b '>
+        <h2 className='pr-4 py-2 font-semibold text-color '>
+          RECENTLY UPDATED
+        </h2>
+        <ul className='flex border-b '>
           {tab.map(child => (
             <Tab
               onClick={onClickTabItem}
